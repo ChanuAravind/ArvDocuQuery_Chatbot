@@ -49,7 +49,7 @@ def chat_groq(messages):
     client = Groq(api_key=os.environ.get('GROQ_API_KEY'))
     response_content = ''
     stream = client.chat.completions.create(
-        model="llama3-70b-8192",
+        model="llama-3.1-8b-instant",
         messages=messages,
         max_tokens=1024,
         temperature=1.3,
